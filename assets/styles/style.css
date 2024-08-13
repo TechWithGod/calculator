@@ -1,0 +1,164 @@
+@font-face {
+    font-family: 'Space Grotesk';
+    src: url('../fonts/Space_Grotesk/SpaceGrotesk-VariableFont_wght.ttf');
+    font-weight:500;
+}
+
+:root {
+    --dark-primary-color:#22252d;
+    --dark-secondary-color:#292d36;
+    --light-secondary-color:#f9f9f9;
+    --light-primary-color:#f9f9f9;
+    --dark-button-color:#272b33;
+    --text-green-color:#26ecc8;
+    --text-red-color:#ee7878;
+    --text-white-color:#ffffff;
+    --body-background-color:#e6e6e6;
+    --calculator-height:675px;
+    --calculator-width:320px;
+}
+
+html {
+    box-sizing:border-box;
+    font-family:'Space Grotesk';
+}
+
+body {
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    width:100vw;
+    background-color:var(--body-background-color);
+}
+
+*, *::after, *::before {
+    box-sizing:inherit;
+    margin:0;
+    padding:0;
+}
+
+/* calculator wrapper desigining */
+
+#calculator-wrapper {
+    width:var(--calculator-width);
+    height:var(--calculator-height);
+    background-color:var(--dark-primary-color);
+    border-radius:20px;
+}
+
+
+/* text input wrapper */
+
+#text-input-wrapper {
+    width:100%;
+    height:40%;
+}
+
+/* button wrapper designing */
+#buttons-wrapper {
+    width:100%;
+    height:60%;
+    background-color:var(--dark-secondary-color);
+    border-radius:40px 40px 20px 20px;
+    padding-top:30px;
+    padding-left:30px;
+    display:grid;
+    grid-template-columns:repeat(4, 1fr); 
+    color:var(--text-white-color);
+    font-size:18px;
+}
+
+
+/* buttons designing */
+
+#buttons-wrapper > div {
+    width:50px;
+    height:50px;
+    background-color: var(--dark-button-color);
+    border-radius:10px;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+}
+
+#buttons-wrapper > div:hover {
+    cursor:pointer;
+}
+
+#history-btn {
+    transform:rotate(180deg);
+    font-size:24px;
+}
+
+.operator, #result-btn {
+    font-size:25px;
+}
+
+.modulo {
+    font-size:18px;
+}
+
+#buttons-wrapper > div:active {
+    font-size:small;
+}
+
+/* designing text Box (includes result Box and input Box */
+
+#text-input-wrapper {
+    color:var(--text-white-color);
+    position:relative;
+}
+
+#input-box {
+    position:absolute;
+    right:25px;
+    bottom:75px;
+    font-size:20px;
+}
+
+#result {
+    position:absolute;
+    bottom:10px;
+    right:23px;
+    font-size:3.5rem;
+}
+
+/*designing theme bar*/
+
+#theme-bar {
+    background-color: var(--dark-secondary-color);
+    width:90px;
+    display:flex;
+    justify-content: space-around;
+    padding:10px 5px;
+    position:absolute;
+    top:20px;
+    left:120px;
+    border-radius:20px;
+}
+
+#dark-theme-btn {
+color:var(--text-white-color);
+cursor:pointer;
+}
+
+#light-theme-btn  {
+    color:var(--dark-primary-color);
+    cursor:pointer;
+}
+
+/* styling clear button */
+
+#clear-user-history {
+    font-size:1rem;
+    border:none;
+    background-color:var(--text-green-color);
+    color:var(--dark-button-color);
+    padding:0.3rem;
+    border-radius:5px;
+}
+
+#clear-user-history:hover {
+    cursor:pointer;
+}
